@@ -970,10 +970,10 @@ if __name__ == '__main__':
         # Postprocessing for 22 and 23
         pre_arr_updata = np.copy(ret)
         new_pre_arr = np.zeros_like(ret)
-        new_pre_arr[pre_arr == 22] = 1
-        new_pre_arr[pre_arr == 23] = 1
+        new_pre_arr[ret == 22] = 1
+        new_pre_arr[ret == 23] = 1
         labeled_array, num_features = label(new_pre_arr)
-        roi_18_list = np.argwhere(pre_arr == 18)
+        roi_18_list = np.argwhere(ret == 18)
         max_18 = roi_18_list[:, 0].max()
         min_18 = roi_18_list[:, 2].min()
 
